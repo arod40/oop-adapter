@@ -2,8 +2,8 @@ package business;
 
 import java.util.List;
 
-import model.Person;
+import model.IPerson;
 
 public interface IPersonService {
-	List<Person> getPersonList();
+	List<? extends IPerson> getPersonList();
 }

@@ -1,15 +1,15 @@
 package model;
 
 public interface IPerson {
-    public Long getId();
+    Long getId();
 
-    public Long getSalary();
+    Long getSalary();
 
-    public Boolean getMarried();
+    Boolean getMarried();
 
-    public String getfName();
+    String getfName();
 
-    public String getlName();
+    String getlName();
 
-    public Double getAge();
+    Double getAge();
 }

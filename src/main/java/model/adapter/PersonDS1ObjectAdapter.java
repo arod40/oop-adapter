@@ -1,10 +1,9 @@
 package model.adapter;
 
-import model.Person;
+import model.IPerson;
 import model.remote.PersonDS1;
-import model.remote.PersonDS2;
 
-public class PersonDS1ObjectAdapter extends Person {
+public class PersonDS1ObjectAdapter implements IPerson {
     PersonDS1 personds1;
 
     public PersonDS1ObjectAdapter(PersonDS1 personds1){

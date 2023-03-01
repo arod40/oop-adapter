@@ -3,7 +3,7 @@ import java.util.List;
 
 import business.IPersonService;
 
-import model.Person;
+import model.IPerson;
 
 
 
@@ -20,13 +20,13 @@ public class ReportController {
 		this.service = service;
 	}
 
-	public List<Person> getPersonList() {
+	public List<? extends IPerson> getPersonList() {
 		return service.getPersonList();
 	}
 
 	public Long getReportPersonSalaryTotal() {
 		Long total = 0l;
-		for (Person person : getPersonList()) {
+		for (IPerson person : getPersonList()) {
 			total += person.getSalary();
 		}
 		return total;
@@ -35,7 +35,7 @@ public class ReportController {
 	public String getReportPersonMarriedStat() {
 		Long total = (long) getPersonList().size();
 		Long married = 0l;
-		for (Person person : getPersonList()) {
+		for (IPerson person : getPersonList()) {
 			if (person.getMarried()) {
 				married += 1;
 			}

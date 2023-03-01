@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Person;
+import model.IPerson;
 import model.remote.PersonDS1;
 import model.remote.PersonDS2;
 
@@ -16,7 +16,7 @@ public class RemotePersonService implements IPersonService {
 	private static final String PERSON_XML_DS2 = "person-ds2.xml";
 
 	@SuppressWarnings("unchecked")
-	public List<Person> getPersonList() {
+	public List<? extends IPerson> getPersonList() {
 		
 		return null;
 	}
