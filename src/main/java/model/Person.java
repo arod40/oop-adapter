@@ -1,7 +1,7 @@
 package model;
 
 
-public class Person {
+public class Person implements IPerson{
 	private Long id;
 	private Long salary;
 	private Double age;
