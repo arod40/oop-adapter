@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import business.RemotePersonService;
 import view.ReportController;
 import view.page.Page;
 import view.page.PersonListPage;
@@ -20,7 +21,7 @@ public class Container {
 
 	private static void bootstrap() {
 		// bootstrap normally in XML
-		IPersonService personService = new PersonService();
+		IPersonService personService = new RemotePersonService();
 		context.put("personService", personService);
 		
 		ReportController controller = new ReportController();
